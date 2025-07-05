@@ -58,7 +58,7 @@ def get_tickers():
     ensure_event_loop()
     try:
         crude_contracts = ib.reqContractDetails(Future(symbol='CL', exchange='NYMEX'))
-        brent_contracts = ib.reqContractDetails(Future(symbol='BZ', exchange='ICEEU'))
+        brent_contracts = ib.reqContractDetails(Future(symbol='BZ', exchange='NYMEX', currency='USD'))
         print("Crude contracts:", crude_contracts)
         print("Brent contracts:", brent_contracts)
 
